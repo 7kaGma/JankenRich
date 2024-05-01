@@ -1,0 +1,348 @@
+@charset "UTF-8";
+/* ==========
+全体指定
+========== */
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+}
+
+
+/* ==========
+header
+========== */
+header{
+  position: relative;
+  width: 100vw;
+  height: 70px;
+  background-color: rgb(44, 44, 44);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.header-container{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header-container h1{
+  color: white;
+  font-family: "Zen Antique", serif;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+.dummy{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(44, 44, 44);
+}
+#humburger{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(44, 44, 44);
+  position: relative;
+}
+
+#humburger span{
+  position: absolute;
+  background-color: white;
+  width: 44%;
+  height: 3px;
+  left: 14px;
+}
+
+#humburger span:nth-child(1){
+  top:15px;
+}
+#humburger span:nth-child(2){
+  top: 23px;
+}
+#humburger span:nth-child(3){
+  top: 31px;
+}
+
+
+#humburger.close span:nth-child(1){
+  top: 23px;
+  transform:rotate(45deg) ;
+}
+#humburger.close span:nth-child(2){
+  opacity: 0;
+}
+#humburger.close span:nth-child(3){
+  top: 23px;
+  transform: rotate(-45deg);
+}
+
+/* ==========
+rule
+========== */
+#rule{
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(44, 44, 44);
+  padding: 20px;
+  font-size: 1.6rem;
+  color: white;
+  box-sizing: border-box;
+  line-height: 2.0;
+}
+#rule h2{
+  font-size: 2.4rem;
+  margin-block-end: 30px; 
+  
+}
+
+#rule li{
+  margin-block-end: 30px;
+}
+
+#rule span{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+/* ==========
+main
+========== */
+main{
+  background-color: #472C59;
+  width: 100vw;
+  height: 100vh;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px 10px 0px;
+}
+.game-container{
+  background-color:white ;
+  width:350px;
+  height:520px ;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* ==========
+main_img
+========== */
+
+.image-container{
+  margin: 10px auto 20px;
+  box-sizing: border-box;
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container img{
+  display: block;
+  width: 150px;
+  /* border: solid 1px black; */
+  box-sizing: border-box;
+}
+
+/* ==========
+main_text
+========== */
+#heading{
+  font-family: "Zen Antique", serif;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  text-align: center;
+  /* background-color: aqua; */
+
+}
+
+/*===========
+janken 
+==========*/
+#janken{
+display: block;
+/* display: none; */
+}
+
+
+.btn{
+  display: flex;
+  margin: 20px auto;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: solid 1px  rgb(44, 44, 44);
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn:hover{
+  border:solid 1px #cca33a ;
+}
+
+.jicon{
+  width: 50px;
+}
+.ja-btn__text{
+  width: 40%;
+}
+
+.ent-btn{
+  color: white;
+  background-color: #cca33a;
+  border: none;
+}
+.ent-btn:hover{
+  opacity: 0.8;
+}
+.activeja{
+  border: 1px solid  #cca33a;
+}
+
+
+/*==========
+hoi
+========== */
+#hoi{
+  display:none;
+  /* background-color: aqua; */
+}
+.frame{
+  margin: 20px auto 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  gap: 30px;
+}
+
+.arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid  rgb(44, 44, 44);
+  background-color: white;
+}
+.arrow:hover{
+  border:solid 1px #cca33a ;
+}
+
+.arrow-img{
+  width: 50px;
+}
+.left-img{
+  transform: rotate(-90deg);
+}
+.right-img{
+  transform: rotate(90deg);
+}
+.bottom-img{
+  transform: rotate(180deg);
+}
+
+.hoi-cpu{
+  
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(44, 44, 44);
+  gap: 15px;
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 20px;
+}
+.cpu-arrow{
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+.cpu-arrow-img{
+  width: 30px;
+}
+.top{
+  transform: rotate(0deg);
+}
+.left{
+  transform: rotate(-90deg);
+}
+.right{
+  transform: rotate(90deg);
+}
+.bottom{
+  transform: rotate(180deg);
+}
+.appear{
+  display: block;
+}
+
+#bar{
+  position: relative;
+  width: 90%;
+  height: 5px;
+  margin: 0 auto;
+}
+#meter{
+  background-color: #cca33a;
+  animation:timebar 2s steps(48) forwards;
+}
+@keyframes timebar{
+  0%{width:0%;height:5px;  }
+  100%{width:100%; height:5px; }
+}
+
+#jokyo{
+  position: absolute;
+  font-size: 2.4rem;
+  font-family: "Zen Antique", serif;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 30px;
+  z-index: 100;
+  text-align: center;
+  line-height: 30px;
+  /* background-color: aqua; */
+}
+
+/* sho-hai */
+#shohai{
+  display: none;
+  box-sizing: border-box;
+}
+#result{
+  text-align: center;
+  line-height: 2.4rem;
+  font-size: 2.4rem;
+  font-family: "Zen Antique", serif;
+}
+#onemore{
+  margin-block-start: 60px;
+  background-color: #cca33a;
+  color: white;
+  border: none;
+}
+/*==========
+レスポンシブ
+==========*/
+@media(max-width:767px){
+  .dummy{
+    display: none;
+  }
+}
+

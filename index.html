@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="じゃんけんで相撲！">
+  <title>大相撲じゃんけん</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- ファビコン -->
+  <link rel="icon" href="./assets/img/favicon.ico">
+  <!-- Googleフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="dummy"></div>
+      <h1>大相撲石拳</h1>
+      <div id="humburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="rule" class=" hidden">
+      <h2>ルール説明</h2>
+      <ol>
+        <li>STEP1：立合い
+          <span>じゃんけんを行います。</span>
+        </li>
+        <li>STEP2 ：取組
+          <span>制限時間内に、画面に表示された矢印と同じ方向の矢印を左から順に入力してください。</span>
+          <span>※STEP1の勝敗結果によって変化します。</span>
+        </li>
+        <li>勝敗：
+          <span>制限時間内に矢印ボタンをすべて正しくクリックできたら「勝ち」です。</span>
+        </li>
+      </ol>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="game-container">
+        <p id="heading">立会い</p>
+        <div class="image-container">
+          <figure><img id="image" src="./assets/img/first2.png" alt="力士のイラスト"></figure>
+        </div>
+        <div class="game-text">
+          <!-- じゃんけん -->
+          <div id="janken">
+            <ul>
+              <li id="gu_btn" class="btn ja-btn">
+                <img class="jicon" src="./assets/img/gu.png" alt="グーのイラスト">
+                <p class="ja-btn__text">かちあげ</p>
+              </li>
+              <li id="cho_btn" class="btn ja-btn">
+                <img class="jicon" src="./assets/img/cho.png" alt="チョキのイラスト">
+                <p class="ja-btn__text">変化</p>
+              </li>
+              <li id="par_btn" class="btn ja-btn">
+                <img class="jicon" src="./assets/img/pa.png" alt="パーのイラスト">
+                <p class="ja-btn__text">諸手差し</p>
+              </li>
+            </ul>
+            <p id="btn" class="btn ent-btn">決定</p>
+            <div>
+            </div>
+          </div>
+          <!-- ホイ -->
+          <div id="hoi">
+            <div id="bar">
+              <p id="jokyo"></p>
+              <p id="meter"></p>
+            </div>
+            <div class="hoi-cpu">
+              <p id="cpu1" class="cpu-arrow arrow"><img class="arrow-img  cpu-arrow-img" src="./assets/img/arrow.png"
+                  alt="矢印"></p>
+              <p id="cpu2" class="cpu-arrow arrow"><img class="arrow-img  cpu-arrow-img" src="./assets/img/arrow.png"
+                  alt="矢印"></p>
+              <p id="cpu3" class="cpu-arrow arrow"><img class="arrow-img  cpu-arrow-img" src="./assets/img/arrow.png"
+                  alt="矢印"></p>
+              <p id="cpu4" class="cpu-arrow arrow"><img class="arrow-img  cpu-arrow-img" src="./assets/img/arrow.png"
+                  alt="矢印">
+              </p>
+            </div>
+            <div class="frame">
+              <p></p>
+              <p id="top" class="arrow"><img class="arrow-img top-img" src="./assets/img/arrow.png" alt="上矢印"></p>
+              <p></p>
+              <p id="left" class="arrow"><img class="arrow-img left-img" src="./assets/img/arrow.png" alt="左矢印"></p>
+              <p></p>
+              <p id="right" class="arrow"><img class="arrow-img right-img" src="./assets/img/arrow.png" alt="右矢印"></p>
+              <p></p>
+              <p id="bottom" class="arrow"><img class="arrow-img bottom-img" src="./assets/img/arrow.png" alt="下矢印">
+              </p>
+            </div>
+          </div>
+          <div id="shohai">
+            <p id="result"></p>
+            <p id="onemore" class="btn">もう一度遊ぶ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- JS-->
+  <script src="./assets/js/commom.js"></script>
+</body>
+
+</html>
